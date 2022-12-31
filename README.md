@@ -16,8 +16,12 @@ def start ():
 
        #Envia um Email para os fornecedores, indicando os itens que estão faltando, e tambem a data de envia'''
 
-def fmenor_estoque(self,df_two):  # Função para analisar  o produto com maior estoque
+def fmenor_estoque(self,df_two):  
 
-def fmaior_estoque(self,df_two):  # Função para analisar  o produto com maior estoque
+       #Função para analisar  o produto com maior estoque
+
+def fmaior_estoque(self,df_two): 
+
+       #Função para analisar  o produto com maior estoque
 
 
