@@ -6,11 +6,7 @@ from datetime import datetime, timedelta
 import os
 
 class Automacao:
-    ''' o Desenvovedor terá que mudar os nomes dos campos utilizados se o nome dos campos forem alterados
-
-
-
-    '''
+   
     def __init__(self, df_one,df_two):
         self.df_one= df_one
         self.df_two= df_two
@@ -39,11 +35,6 @@ class Automacao:
         return quant
 
     def start(self, df_two):
-        '''  Linha 62: Filtra a quantidade Menor e igual a 0
-          : Cria  uma Serie (p), que tranfoma negativos em positivos
-          : Deleta o campo x['Quantidade Total']
-          : Faz um Inner Join entre os Index, emparelhando x com p
-         Envia um Email para os fornecedores, indicando os itens que estão faltando, e tambem a data de envia'''
         def pedido_analise(df_two):
             x = df_two[df_two['Quantidade Total'] <= 0]
             p = x['Quantidade Total'] * -1
