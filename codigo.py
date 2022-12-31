@@ -10,11 +10,11 @@ class Automacao:
     def __init__(self, df_one,df_two):
         self.df_one= df_one
         self.df_two= df_two
-    def fmaior_estoque(self,df_two):  # Função para analisar  o produto com maior estoque
+    def fmaior_estoque(self,df_two): 
         df_maior = df_two[df_two['Quantidade Total'] == df_two['Quantidade Total'].max()]
         return df_maior[['Produto','Quantidade Total']]
 
-    def fmenor_estoque(self,df_two):  # Função para analisar  o produto com maior estoque
+    def fmenor_estoque(self,df_two):  
         df_menor = df_two[df_two['Quantidade Total'] == df_two['Quantidade Total'].min()]
         return df_menor[['Produto','Quantidade Total']]
 
@@ -45,7 +45,7 @@ class Automacao:
         def pedido_email(df_inner):
             outlook = win32.Dispatch('outlook.application')
             mail = outlook.CreateItem(0)
-            mail.To = 'nilsonn.fatec@gmail.com'
+            mail.To = '@gmail.com'
             mail.Subject = 'Compras dos Itens '
             mail.HTMLBody = f'''
                       <p>Prezado Fornecedor,</p>
@@ -88,7 +88,7 @@ def tomorrow(self,presentday):
     return tomorrow
 
 
-tabela= pd.ExcelFile('C:/Users/nilso/Downloads/Estoque.xlsx',)
+tabela= pd.ExcelFile('Estoque.xlsx',)
 
 df_one = pd.read_excel(tabela,'Estoque')
 df_two = pd.read_excel(tabela,'Movimento')
@@ -96,7 +96,7 @@ df_two = pd.read_excel(tabela,'Movimento')
 
 automacao= Automacao(df_one,df_one)
 automacao_email= automacao.start(df_two)
-#automacao_porcentagem= automacao.filtro_porcentagem(df_one) # Só funciona com a base atulizada, pois a uma comparação entre hoje e ontem
+#automacao_porcentagem= automacao.filtro_porcentagem(df_one) # Só funciona com a base atulizada, pois é uma comparação entre hoje e ontem
 
 maior= automacao.fmaior_estoque(df_two)
 menor= automacao.fmenor_estoque(df_two)
