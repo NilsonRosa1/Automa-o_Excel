@@ -1,27 +1,3 @@
-# Automa-o_Excel
-Crio uma  base de dados imaginária no excel, procuro os indicadores de performasse e automatizo o relatório.
-
-
-Sobre a Class Automacao:
-
-def start ():
-
-       #Filtra a quantidade Menor e igual a 0
-
-       #Cria  uma Serie (p), que tranfoma negativos em positivos
-
-       #Deleta o campo x['Quantidade Total']
-
-       #Faz um Inner Join entre os Index, emparelhando x com p
-
-       #Envia um Email para os fornecedores, indicando os itens que estão faltando, e tambem a data de envia'''
-
-def fmenor_estoque(self,df_two):  
-
-       #Função para analisar  o produto com maior estoque
-
-def fmaior_estoque(self,df_two): 
-
-       #Função para analisar  o produto com maior estoque
+I created an imaginary database in Excel and developed a Python script to extract performance indicators and automate the report generation process. This script uses a class called Automacao, which has a method called start() that filters out negative values, creates a new series of positive values, deletes a specific column, performs an inner join operation, and finally sends an email to suppliers with the list of missing items and the expected delivery date. In addition, the Automacao class also includes two other methods, fmenor_estoque() and fmaior_estoque(), to analyze the products with the lowest and highest stock levels, respectively. This code is available on my GitHub repository for anyone who wants to automate their Excel reports and improve their business performance.
 
 
